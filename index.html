@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orbit Chat — iOS 26 Inspired</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-logo">◎</div>
+          <div>
+            <p class="brand-title">Orbit</p>
+            <p class="brand-subtitle">iOS 26 Studio</p>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <button class="nav-item active">
+            <span>Chat</span>
+            <span class="pill">Live</span>
+          </button>
+          <button class="nav-item">Design Lab</button>
+          <button class="nav-item">Creators</button>
+          <button class="nav-item">Automation</button>
+        </nav>
+
+        <div class="panel">
+          <div class="panel-header">Credits</div>
+          <div class="credit-card">
+            <div>
+              <p class="credit-title">Monthly Balance</p>
+              <p class="credit-value">18,240</p>
+              <p class="credit-meta">+2,000 bonus from Pro</p>
+            </div>
+            <button class="ghost">Top Up</button>
+          </div>
+          <div class="credit-progress">
+            <div class="credit-progress-fill"></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">Account</div>
+          <div class="account-card">
+            <div class="avatar">AR</div>
+            <div>
+              <p class="account-name">Aria Rivera</p>
+              <p class="account-email">aria@orbit.design</p>
+            </div>
+          </div>
+          <button class="secondary" id="open-settings">Account Settings</button>
+          <button class="secondary">Usage Analytics</button>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <p class="headline">AI Chat Studio</p>
+            <p class="subhead">Built for iOS 26 aesthetics and effortless creative flow.</p>
+          </div>
+          <div class="top-actions">
+            <button class="ghost">Share</button>
+            <button class="primary">New Session</button>
+          </div>
+        </header>
+
+        <section class="status-grid">
+          <div class="status-card">
+            <p class="status-label">Active Space</p>
+            <p class="status-value">Visionary UI</p>
+            <p class="status-meta">Synced across iPhone • iPad • Vision</p>
+          </div>
+          <div class="status-card">
+            <p class="status-label">Latency</p>
+            <p class="status-value">38 ms</p>
+            <p class="status-meta">Adaptive streaming enabled</p>
+          </div>
+          <div class="status-card">
+            <p class="status-label">Mood</p>
+            <p class="status-value">Calm Focus</p>
+            <p class="status-meta">Auto soundscape running</p>
+          </div>
+        </section>
+
+        <section class="chat-panel">
+          <div class="chat-header">
+            <div>
+              <p class="chat-title">Weel Designer Assistant</p>
+              <p class="chat-subtitle">Premium interface coach • Visual direction</p>
+            </div>
+            <div class="chip-row">
+              <span class="chip">iOS 26</span>
+              <span class="chip">Glass</span>
+              <span class="chip">Haptics</span>
+            </div>
+          </div>
+
+          <div class="chat-thread">
+            <div class="message bot">
+              <div class="message-avatar">🤖</div>
+              <div class="message-bubble">
+                <p>Welcome to Orbit. I can craft layouts, prompts, and motion recipes that feel native to iOS 26.</p>
+                <p class="message-meta">10:12 AM · Assistant</p>
+              </div>
+            </div>
+            <div class="message user">
+              <div class="message-bubble">
+                <p>Design a floating action stack for the chat input and make it feel weightless.</p>
+                <p class="message-meta">10:13 AM · You</p>
+              </div>
+            </div>
+            <div class="message bot">
+              <div class="message-avatar">🤖</div>
+              <div class="message-bubble">
+                <p>Use a frosted capsule with a 24px radius, add dual shadows (ambient + key), and animate in with a 120ms spring.</p>
+                <div class="message-actions">
+                  <button class="ghost">Save Snippet</button>
+                  <button class="ghost">Apply</button>
+                </div>
+                <p class="message-meta">10:14 AM · Assistant</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="composer">
+            <div class="composer-input">
+              <span class="composer-icon">✨</span>
+              <input type="text" placeholder="Ask Orbit to design anything…" />
+              <button class="ghost">Files</button>
+              <button class="primary">Send</button>
+            </div>
+            <div class="composer-hints">
+              <span>Context: iOS 26 • Human interface guidelines</span>
+              <span>Shift + Enter for new line</span>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="modal" id="settings-modal" aria-hidden="true">
+      <div class="modal-card">
+        <div class="modal-header">
+          <div>
+            <p class="modal-title">Account Settings</p>
+            <p class="modal-subtitle">Tune your experience, privacy, and billing.</p>
+          </div>
+          <button class="ghost" id="close-settings">Close</button>
+        </div>
+        <div class="modal-grid">
+          <div class="setting">
+            <p class="setting-title">AI Voice</p>
+            <p class="setting-meta">Luna · Warm, breathable</p>
+            <button class="secondary">Change voice</button>
+          </div>
+          <div class="setting">
+            <p class="setting-title">Security</p>
+            <p class="setting-meta">Passkeys enabled on all devices</p>
+            <button class="secondary">Manage</button>
+          </div>
+          <div class="setting">
+            <p class="setting-title">Billing</p>
+            <p class="setting-meta">Orbit Pro · $24 / month</p>
+            <button class="secondary">Update</button>
+          </div>
+          <div class="setting">
+            <p class="setting-title">Integrations</p>
+            <p class="setting-meta">Figma, Notes, Shortcuts</p>
+            <button class="secondary">Configure</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
