@@ -99,7 +99,7 @@
             </div>
           </div>
 
-          <div class="chat-thread">
+          <div class="chat-thread" id="chat-thread">
             <div class="message bot">
               <div class="message-avatar">🤖</div>
               <div class="message-bubble">
@@ -129,9 +129,14 @@
           <div class="composer">
             <div class="composer-input">
               <span class="composer-icon">✨</span>
-              <input type="text" placeholder="Ask Orbit to design anything…" />
+              <input
+                type="text"
+                id="chat-input"
+                placeholder="Ask Orbit to design anything…"
+                autocomplete="off"
+              />
               <button class="ghost">Files</button>
-              <button class="primary">Send</button>
+              <button class="primary" id="send-button" type="button">Send</button>
             </div>
             <div class="composer-hints">
               <span>Context: iOS 26 • Human interface guidelines</span>
